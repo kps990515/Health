@@ -18,12 +18,14 @@ public class MainActivity extends AppCompatActivity {
         initView();
     }
 
+    // 내가 만들어준 함수(화면에 쓸 디자인을 연결)
     private void initView() {
         // 자바 클래스의 btn_login과 디자인의 btn_login이 같은 것이라는 것을 알려주는 코드
         btn_login = findViewById(R.id.btn_login);
         btn_signUp = findViewById(R.id.btn_signUp);
     }
 
+    // 로그인 버튼 기능 구현
     public void login(View v){
         Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
