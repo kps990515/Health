@@ -1,5 +1,6 @@
 package org.andriodtown.health;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
@@ -28,6 +29,7 @@ public class SignUpActivity extends AppCompatActivity {
     private ImageView img_email;
     private ImageView img_pw;
     private ImageView img_check;
+    private Button btn_profile;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -177,7 +179,24 @@ public class SignUpActivity extends AppCompatActivity {
         });
     }
 
-    private void enableLogin(boolean email,boolean pw, boolean pwcheck, boolean lname, boolean fname){
+    public void profile(View v){
+        Intent intent = new Intent(this, ProfileActivity.class);
+        startActivityForResult(intent, 999);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(resultCode==RESULT_OK){
+            switch(resultCode){
+                case 999:
+
+            }
+        }
+    }
+
+
+    private void enableLogin(boolean email, boolean pw, boolean pwcheck, boolean lname, boolean fname){
         if(email&&pw&&pwcheck&&fname&&lname==true){
             btn_signinFinal.setEnabled(true);
         }else{
