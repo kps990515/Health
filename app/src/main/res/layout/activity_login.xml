@@ -39,13 +39,14 @@
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
         android:text="PW"
         android:textColor="#ffffff"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/btn_login"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        tools:layout_editor_absoluteX="25dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
         android:id="@+id/btn_login"
@@ -109,4 +110,24 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <ImageView
+        android:id="@+id/img_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/edit_id"
+        app:layout_constraintEnd_toEndOf="@+id/edit_id"
+        app:layout_constraintTop_toTopOf="@+id/edit_id"
+        app:srcCompat="@drawable/ic_action_alert" />
+
+    <ImageView
+        android:id="@+id/img_pw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/edit_pw"
+        app:layout_constraintEnd_toEndOf="@+id/edit_id"
+        app:layout_constraintTop_toTopOf="@+id/edit_pw"
+        app:srcCompat="@drawable/ic_action_alert" />
 </android.support.constraint.ConstraintLayout>
